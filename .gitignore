@@ -1,0 +1,20 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Editor files
+.vscode/
+*.code-workspace
+
+# Secrets
+.env
+
+# Large files
+*.h5
+*.zip
+*.pdf
+uploads/
+reports/

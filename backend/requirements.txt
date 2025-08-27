@@ -1,0 +1,13 @@
+flask
+flask-cors
+tensorflow
+numpy
+pillow
+reportlab
+opencv-python-headless
+scikit-image
+SQLAlchemy
+PyMySQL
+python-dotenv
+mysql-connector-python
+cloudinary

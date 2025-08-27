@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brain Tumor Report Generation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="mini-nav">
+      <a href="index.html" class="mini-link">← Back to Home</a>
+    </nav>
+
+    <header>
+      <h1>Brain Tumor Report Generation</h1>
+      <div class="subtitle">Upload MRI (JPG). Get prediction. Download report.</div>
+    </header>
+
+    <section class="card">
+      <div class="upload-box" id="dropZone">
+        <div class="upload-icon" aria-hidden="true">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 16V4m0 0l-4 4m4-4l4 4" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20 16v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="upload-text">
+          Drop your <strong>image</strong> here or <span class="browse" id="browseLink">browse</span>.
+        </p>
+        <p class="file-note">Only JPG/JPEG File</p>
+        <label class="upload-btn">
+          Select Image
+          <input id="fileInput" type="file" accept=".jpg,.jpeg" hidden />
+        </label>
+        <div class="progress" id="progress">
+          <div class="bar" id="progressBar"></div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div>
+          <div class="preview-wrap">
+            <img id="preview" class="preview" alt="Uploaded MRI preview" />
+            <div id="emptyState" class="empty">No image selected yet.</div>
+          </div>
+
+          <!-- Patient fields -->
+          <div class="patient-form">
+            <input id="pname" type="text" placeholder="Patient name">
+            <input id="page" type="number" placeholder="Age">
+            <input id="pgender" type="text" placeholder="Gender">
+          </div>
+
+          <div class="actions">
+            <button id="predictBtn" class="btn" disabled>Predict</button>
+            <div id="genState" class="success"><span class="pill">Report generated</span></div>
+            <button id="downloadBtn" class="btn" style="display:none;">Download Report</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
